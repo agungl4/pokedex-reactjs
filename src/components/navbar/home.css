@@ -35,8 +35,28 @@ article {
 .navbar {
   box-shadow: 1px 1px 1px 1px #adadad3f;
   min-height: 100%;
+  height: 7vh;
 }
 
+.logo {
+  width: 32px;
+  height: 32px;
+  margin-left: 15px;
+}
+
+.brand{
+  display: flex;
+  flex-direction: row;
+}
+
+.icon{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.h2{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 .input-group {
   width: 500px;
 }

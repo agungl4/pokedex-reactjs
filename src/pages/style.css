@@ -2,7 +2,7 @@
     font-family: metropolis-bold;
     src: url(../assets/fonts/Metropolis-Bold.otf);
   }
-  @font-face {
+@font-face {
     font-family: metropolis;
     src: url(../assets/fonts/Metropolis-Regular.otf);
   }
@@ -21,18 +21,16 @@
     width: 50px;
 }
 .txt{
-    height: 50px;
-    width: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-left: 10px;
+    margin-left: 20px;
+    margin-bottom: 15;
     color: #DB3022;
     font-size: 28px;
     font-weight: bold;
     font-family: metropolis-bold;
 }
-
 
 /* textheader */
 .textheader{
@@ -41,9 +39,10 @@
     margin-top: 50px;;
 }
 .text{
-    font-size: 18px;
+    font-size: 15px;
     font-weight: bold;
     font-family: metropolis;
+    color: #fff;
 }
 
 
@@ -73,6 +72,7 @@
     border-radius: 4px;
     
 }
+
 
 .customer{
     height: 100%;
@@ -115,13 +115,12 @@
     margin-bottom: 16px;
     background-color: seagreen;
 }
-.text-input{
-    height: 100%;
+.text-info{
     width: 100%;
-    margin-bottom: 16px;
-    border-radius: 4px;
+    font-size: 20px;
     padding-left: 7px;
-    font-family: metropolis;
+    font-family: metropolis-bold;
+    margin: 7px;
 }
 @media screen and (max-width: 768px) {
     div.col-input{
@@ -162,19 +161,22 @@
     display: flex;
     justify-content: center;
     border-radius: 8px;
-    background-color: #DB3022
+    border-color: #fff;
+    border-width: 3px;
+    background-color: #DB3022;
+    margin-bottom: 5px;
+    margin-top: 5px;
 }
 .txt-primary{
-    width: 400px;
-    height: 50px;
-    margin-top: 25px;
+    width: 24vw;
+    height: 5vh;
+    font-size: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
     color: white;
     background-color: #DB3022;
     text-decoration: none;
-    border-radius: 25px;
     font-family: metropolis;
 }
 

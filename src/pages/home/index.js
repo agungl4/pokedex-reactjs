@@ -3,6 +3,8 @@ import Navbar from '../../components/navbar';
 import CardList from '../../components/card'
 import axios from 'axios'
 import './../style.css'
+import { Pokelogo } from "../../assets";
+// import "./style.css";
 
 class home extends Component {
     constructor() {
@@ -32,10 +34,11 @@ class home extends Component {
     }
 
 
-    nextPage() {
+    nextPage = () => {
+        // console.log(this.state.nextpage)
         const nextPage = this.state.nextpage
-        console.log(this.state.nextpage)
-        if (nextPage != null) {
+        console.log(nextPage)
+        if (nextPage != '') {
             axios.get(this.state.nextpage)
                 .then(({ data }) => {
                     this.setState({
@@ -71,21 +74,26 @@ class home extends Component {
     // }
     render() {
         const { pokemons, nextpage, prevpage } = this.state
-        // console.log(this.state.pokemons)
         return (
             <>
                 <Navbar />
-                <button className='btn-primary'
-                    onClick={this.prevPage}
-                >
-                    <p style={{ paddingHorizontal: 10 }}>{`<< `}Prev</p>
-                </button>
+                <div className='btn-wrap' style={{ display: 'flex', justifyContent: 'space-around', marginTop: 25 }}>
+                    <button className='btn-primary' style={{ width: '70px', height: '50px', marginTop: 75 }}
+                        onClick={this.prevPage}
+                    >
+                        <p className='text' style={{ paddingHorizontal: 10 }}>{`<<<`}</p>
+                    </button>
 
-                <button className='btn-primary'
-                    onClick={this.nextPage}
-                >
-                    <p style={{ paddingHorizontal: 10 }}>{` >>`}Next</p>
-                </button>
+                    <div style={{marginBottom:'10px'}}>
+                        <img src={Pokelogo} className='logo' style={{ width: '100%', height: '100%' }} />
+                    </div>
+
+                    <button className='btn-primary' style={{ width: '70px', height: '50px' , marginTop: 75}}
+                        onClick={this.nextPage}
+                    >
+                        <p className='text' style={{ paddingHorizontal: 10 }}>{`>>>`}</p>
+                    </button>
+                </div>
 
                 {
                     pokemons && pokemons.map(({ id, name, url }) => {

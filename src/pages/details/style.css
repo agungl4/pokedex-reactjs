@@ -1,56 +1,54 @@
-.detail-view {
-    width: 100%;
-    height: 100%;
-    padding: 10px;
-    /* background-color: #df095e; */
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-  
-  .sprite-image {
-    width: 80%;
-    height: 150px;
-    margin: 10px auto;
-    background-color: #585858;
-    border: 15px solid #DEDEDE;
-    border-radius: 5px;
-    color: #585858;
-  }
-  
-  .data-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 25vw;
-    height: 500px;
-    padding: 10px;
-    margin: 0 auto;
-    background-color: #585858;
-    border-radius: 5px;
-    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.22);
-    color: #FFF;
-  }
+@font-face {
+  font-family: metropolis-bold;
+  src: url(../../assets/fonts/Metropolis-Bold.otf);
+}
 
-  .imgWrap {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 24vw;
-    height: auto;
-    padding: 8px;
-    background-color: #fff;
-    border-radius: 5px;
-    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.22);
-    color: #FFF;
-  }
-  
-  .data-name {
-    margin: 5px;
-    font-size: 20px;
-    font-weight: 700;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  }
-  
+@font-face {
+  font-family: metropolis;
+  src: url(../../assets/fonts/Metropolis-Regular.otf);
+}
+
+.detail-view {
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  /* background-color: #df095e; */
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.data-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 25vw;
+  height: 530px;
+  padding: 10px;
+  margin: 0 auto;
+  background-color: #DB3022;
+  border-radius: 5px;
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.22);
+  color: #FFF;
+}
+
+.imgWrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 24vw;
+  height: auto;
+  padding: 8px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.22);
+  color: #FFF;
+}
+
+.data-name {
+  margin: 7px;
+  font-size: 20px;
+  font-family: metropolis-bold;
+}
