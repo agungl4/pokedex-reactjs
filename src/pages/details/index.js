@@ -10,6 +10,7 @@ class Details extends Component {
     state = {
         pokemon: {},
         isLoading: true,
+        isSaved: false,
     }
 
     getSinglePoke = () => {
@@ -29,8 +30,20 @@ class Details extends Component {
             });
     }
 
+    getSavePoke = () => {
+        const savedPokemon = this.props.reduxPokemon.savePoke.find(({ id, name }) => {
+            return name == this.props.match.params.name ? true : false
+        })
+        return savedPokemon
+    }
+
     componentDidMount = () => {
         this.getSinglePoke();
+        if (this.getSavePoke()) {
+            this.setState({
+                isSaved: true,
+            })
+        }
     }
 
     addPokemon = () => {
@@ -38,6 +51,9 @@ class Details extends Component {
             id: this.state.pokemon.id,
             name: this.state.pokemon.name
         }))
+        this.setState({
+            isSaved: true,
+        })
     }
 
     removePokemon = () => {
@@ -45,6 +61,9 @@ class Details extends Component {
             id: this.state.pokemon.id,
             name: this.state.pokemon.name
         }))
+        this.setState({
+            isSaved: false,
+        })
     }
 
     removeAllPokemon = () => {
@@ -54,6 +73,7 @@ class Details extends Component {
     render() {
         const { pokemon } = this.state
         console.log(this.props.reduxPokemon)
+        console.log('isSaved', this.state.isSaved)
         let status
         if (this.state.isLoading != true) {
             status =
@@ -89,15 +109,17 @@ class Details extends Component {
                                 })
                             }
 
-                            
-                            <button onClick={this.addPokemon} className='btn-primary'>
-                                <div className='txt-primary'> Save </div>
-                            </button>
-
-
-                            <button onClick={this.removePokemon} className='btn-primary'>
-                                <div className='txt-primary'> Unsave </div>
-                            </button>
+                            {
+                                this.state.isSaved ? (
+                                    <button onClick={this.removePokemon} className='btn-primary'>
+                                        <div className='txt-primary'> Unsave </div>
+                                    </button>
+                                ) : (
+                                        <button onClick={this.addPokemon} className='btn-primary'>
+                                            <div className='txt-primary'> Save </div>
+                                        </button>
+                                    )
+                            }
 
 
                             <button onClick={this.removeAllPokemon} className='btn-primary'>
