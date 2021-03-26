@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/static/css/main.b6ce7c0f.chunk.css",
+    "main.js": "/static/js/main.c0191720.chunk.js",
+    "main.js.map": "/static/js/main.c0191720.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.2b1e505a.js",
+    "runtime-main.js.map": "/static/js/runtime-main.2b1e505a.js.map",
+    "static/js/2.4e7ee60b.chunk.js": "/static/js/2.4e7ee60b.chunk.js",
+    "static/js/2.4e7ee60b.chunk.js.map": "/static/js/2.4e7ee60b.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.b6ce7c0f.chunk.css.map": "/static/css/main.b6ce7c0f.chunk.css.map",
+    "static/js/2.4e7ee60b.chunk.js.LICENSE.txt": "/static/js/2.4e7ee60b.chunk.js.LICENSE.txt",
+    "static/media/style.css": "/static/media/Metropolis-Regular.67a1988d.otf",
+    "static/media/pokelogo.461e827a.png": "/static/media/pokelogo.461e827a.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.2b1e505a.js",
+    "static/js/2.4e7ee60b.chunk.js",
+    "static/css/main.b6ce7c0f.chunk.css",
+    "static/js/main.c0191720.chunk.js"
+  ]
+}
